@@ -10,11 +10,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateWoodrockHeader = generateWoodrockHeader;
+const path = require("path");
+
 function generateWoodrockHeader(doc, imageHeight) {
-    return __awaiter(this, void 0, void 0, function* () {
-        doc.image("woodrock-small-height_banner.png", 50, 20, {
-            width: 495,
-            height: imageHeight || 90,
-        });
-    });
+  const imagePath = path.resolve(
+    process.cwd(), // project root (where package.json is)
+    "woodrock-small-height_banner.png"
+  );
+
+  doc.image(imagePath, 50, 20, {
+    width: 495,
+    height: imageHeight || 90,
+  });
 }
+
