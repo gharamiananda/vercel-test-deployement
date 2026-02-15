@@ -112,8 +112,10 @@ exports.payslipService = {
     },
     createBulkOfferLetters(offerLetters, authUser) {
         return __awaiter(this, void 0, void 0, function* () {
-            const pLimit = (yield Promise.resolve().then(() => __importStar(require("p-limit")))).default;
-            const limit = pLimit(1); // Max 1 at a time
+           
+               const { default: pLimit } = yield import("p-limit");
+
+    const limit = pLimit(1); // Max 1 at a time
             const results = yield Promise.all(offerLetters.map((data) => limit(() => {
                 if (data === null || data === void 0 ? void 0 : data.employeeEmail) {
                     return processOnePayslipLetter(data, authUser);
