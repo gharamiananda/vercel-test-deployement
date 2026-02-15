@@ -1,4 +1,6 @@
 "use strict";
+const path = require("path");
+
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -29,7 +31,11 @@ function generatePayslipPDFWithPDFKit(payslip) {
                 // Add header image (adjust path as needed)
                 // Set image height and place it at the top
                 const imageHeight = 120; // change if your image needs more/less height
-                doc.image("./banner-woodrock.png", 50, 20, {
+                  const imagePath = path.resolve(
+    process.cwd(), // project root (where package.json is)
+    "banner-woodrock.png"
+  );
+                doc.image(imagePath, 50, 20, {
                     width: 495,
                     height: imageHeight,
                 });
