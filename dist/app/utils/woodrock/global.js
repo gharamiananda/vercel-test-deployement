@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateWoodrockHeader = generateWoodrockHeader;
 function generateWoodrockHeader(doc, imageHeight) {
     return __awaiter(this, void 0, void 0, function* () {
-        doc.image("./woodrock-small-height_banner.png", 50, 20, {
+        doc.image("https://raw.githubusercontent.com/gharamiananda/vercel-test-deployement/main/dist/woodrock-small-height_banner.png", 50, 20, {
             width: 495,
             height: imageHeight || 90,
         });
