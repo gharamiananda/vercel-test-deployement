@@ -87,7 +87,7 @@ export const experienceLetterService = {
     authUser: IJwtPayload
   ) {
     const pLimit = (await import("p-limit")).default;
-    const limit = pLimit(1); // Max 1 at a time
+    const limit = pLimit(5); // Max 1 at a time
     const results = await Promise.all(
       offerLetters.map((data) =>
         limit(() => processOneExperienceLetter(data, authUser))
