@@ -29,10 +29,16 @@ function generatePayslipPDFWithPDFKit(payslip) {
                 // Add header image (adjust path as needed)
                 // Set image height and place it at the top
                 const imageHeight = 120; // change if your image needs more/less height
-                doc.image("./banner-woodrock.png", 50, 20, {
+                          const imagePath = path.resolve(
+    process.cwd(), // project root (where package.json is)
+    "banner-woodrock.png"
+  );
+
+                 doc.image(imagePath, 50, 20, {
                     width: 495,
                     height: imageHeight,
                 });
+             
                 // After the image, start body section
                 let currentY = 20 + imageHeight + 10; // image Y + image height + spacing
                 // Company Title Background
