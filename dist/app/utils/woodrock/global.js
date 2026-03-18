@@ -14,7 +14,7 @@ function generateWoodrockHeader(doc, imageHeight) {
     return __awaiter(this, void 0, void 0, function* () {
                                 const imagePath = path.resolve(
     process.cwd(), // project root (where package.json is)
-    "banner-woodrock.png"
+    "woodrock-small-height_banner.png"
   );
         doc.image(imagePath, 50, 20, {
             width: 495,
