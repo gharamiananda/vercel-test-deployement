@@ -78,7 +78,7 @@ async function createPage1(
     .font("Helvetica-Bold")
     .text(
       `Date: ${offerLetter.offerLetterDate}`,
-      pageWidth - 200,
+      pageWidth - 250,
       yPosition + 70,
       {
         align: "right",
