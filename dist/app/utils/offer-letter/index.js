@@ -76,7 +76,7 @@ function createPage1(doc, offerLetter, signatureBuffer) {
             .fillColor("#ff0000")
             .fontSize(16)
             .font("Helvetica-Bold")
-            .text(`Date: ${offerLetter.offerLetterDate}`, pageWidth - 200, yPosition + 70, {
+            .text(`Date: ${offerLetter.offerLetterDate}`, pageWidth - 250, yPosition + 70, {
             align: "right",
         });
         // Main content
